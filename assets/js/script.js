@@ -8,7 +8,7 @@ var itemDescriptions = [
 
 // functions
 // function to update textarea color based on current time
-function timeColorChange() {
+function dscBgColorChange() {
     // get the current time
     var currentTime = checkTime();
 
@@ -68,7 +68,7 @@ function formatTime(time) {
     return time;
 }
 
-// function to automatically run timeColorChange() every minute
+// function to automatically run dscBgColorChange() every minute
 function checkTime() {
     // get current date and time
     var currentDate = new Date();
@@ -112,4 +112,9 @@ scheduleEl.on("click", ".saveBtn", function() {
 
 // on page load
 loadSchedule();
-timeColorChange();
+dscBgColorChange();
+
+// automatically check current time and update descriptions' backgrounds when app window is left open
+setInterval(function() {
+   dscBgColorChange(); 
+}, 1000 * 60);
