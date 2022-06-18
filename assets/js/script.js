@@ -99,7 +99,11 @@ function loadSchedule() {
 
     // loop over schedule element and set description vals
     $.each(scheduleEl.children(), function(index, item) {
-        $(item).children(".description").val(itemDescriptions[index]);
+        // check for null description
+        if (itemDescriptions[index] !== null) {
+            // set saved description text
+            $(item).children(".description").val(itemDescriptions[index]);
+        }
     });
 }
 
