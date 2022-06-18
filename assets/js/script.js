@@ -95,15 +95,15 @@ function saveSchedule(target) {
 // function to load schedule
 function loadSchedule() {
     // get saved schedule
-    itemDescriptions = JSON.parse(localStorage.getItem("schedule"));
+    if (JSON.parse(localStorage.getItem("schedule") !== null)) {
+        itemDescriptions = JSON.parse(localStorage.getItem("schedule"));
+    } else {
+        return;
+    }
 
     // loop over schedule element and set description vals
     $.each(scheduleEl.children(), function(index, item) {
-        // check for null description
-        if (itemDescriptions[index] !== null) {
-            // set saved description text
-            $(item).children(".description").val(itemDescriptions[index]);
-        }
+        $(item).children(".description").val(itemDescriptions[index]);
     });
 }
 
