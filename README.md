@@ -18,10 +18,11 @@ A simple calendar application that allows a user to save events for each hour of
 
 ## Demo
 
-![Deployment Link]()
+![Deployment Link](https://devbritt.github.io/work-day-scheduler/)
 
-![App Screenshot](./assets/images/screenshot.jpg)
+![App Screenshot](./assets/Work-Day-Scheduler.png)
 
 ## Lessons Learned
 
-What did you learn while building this project? What challenges did you face and how did you overcome them?
+The main thing I took away from this assignment was coming up with creative ways to work with dates in JavaScript.
+Rather than using Moment.js, I used a plain JavaScript Date object to get the current time.
