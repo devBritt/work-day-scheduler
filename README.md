@@ -18,7 +18,7 @@ A simple calendar application that allows a user to save events for each hour of
 
 ## Demo
 
-![Deployment Link](https://devbritt.github.io/work-day-scheduler/)
+[Deployment Link](https://devbritt.github.io/work-day-scheduler/)
 
 ![App Screenshot](./assets/Work-Day-Scheduler.png)
 
